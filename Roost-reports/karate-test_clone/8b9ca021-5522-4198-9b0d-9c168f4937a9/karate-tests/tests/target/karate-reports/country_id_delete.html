@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"16e89fa3-7fa9-43ab-88f8-10f6ce449e5f",karate_version:"1.5.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>country_id_delete</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">6</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-09-04 09:52:38 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:33]"><span>[1.1:33]</span> <span>Successfully delete country by its ID</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.2:34]"><span>[1.2:34]</span> <span>Successfully delete country by its ID</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.3:35]"><span>[1.3:35]</span> <span>Successfully delete country by its ID</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:37]"><span>[2:37]</span> <span>Failure due to missing app-identifier header</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:46]"><span>[3:46]</span> <span>Failure due to missing customer-secret-key header</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:55]"><span>[4:55]</span> <span>Failure due to missing ID in the path</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">country_id_delete.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Verify DELETE /country/{id} API functionality</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:33]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:33]</span>
+                <span class="scenario-name">Successfully delete country by its ID</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>3</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:33]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;SAMPLE_API_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:38.371 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.371 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:38.371 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.372 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header app-identifier = &#39;d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header customer-secret-key = &#39;12546580645c21b8a3529680f455f715b6b6829da8976bdfd2e9d51181fe&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;country/32&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.22">
+      <div class="step-ref failed">22</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method DELETE</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.22">09:52:38.375 request:
+1 &gt; DELETE http://api.example.com/v1/country/32
+1 &gt; Accept: application/json
+1 &gt; app-identifier: d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d
+1 &gt; customer-secret-key: ***MASKED***
+1 &gt; Host: api.example.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.375 java.net.UnknownHostException: api.example.com, http call failed after 2 milliseconds for url: http://api.example.com/v1/country/32
+09:52:38.375 country_id_delete.feature:22
+When method DELETE
+http call failed after 2 milliseconds for url: http://api.example.com/v1/country/32
+java.net.UnknownHostException: api.example.com
+country_id_delete.feature:22
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.status == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.status == &#39;success&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;Country deleted successfully&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error_info == &#39;#? _ == null || typeof _ == &quot;string&quot;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:34]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:34]</span>
+                <span class="scenario-name">Successfully delete country by its ID</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:34]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;SAMPLE_API_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:38.378 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.378 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:38.378 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.378 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header app-identifier = &#39;d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:34]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header customer-secret-key = &#39;12546580645c21b8a3529680f455f715b6b6829da8976bdfd2e9d51181fe&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;country/45&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.22">
+      <div class="step-ref failed">22</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method DELETE</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.22">09:52:38.381 request:
+1 &gt; DELETE http://api.example.com/v1/country/45
+1 &gt; Accept: application/json
+1 &gt; app-identifier: d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d
+1 &gt; customer-secret-key: ***MASKED***
+1 &gt; Host: api.example.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.381 java.net.UnknownHostException: api.example.com, http call failed after 1 milliseconds for url: http://api.example.com/v1/country/45
+09:52:38.381 country_id_delete.feature:22
+When method DELETE
+http call failed after 1 milliseconds for url: http://api.example.com/v1/country/45
+java.net.UnknownHostException: api.example.com
+country_id_delete.feature:22
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.status == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.status == &#39;success&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;Country deleted successfully&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error_info == &#39;#? _ == null || typeof _ == &quot;string&quot;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.3:35]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.3:35]</span>
+                <span class="scenario-name">Successfully delete country by its ID</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.3:35]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;SAMPLE_API_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.14">09:52:38.383 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.384 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:38.384 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.384 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header app-identifier = &#39;d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:35]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header customer-secret-key = &#39;12546580645c21b8a3529680f455f715b6b6829da8976bdfd2e9d51181fe&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;country/100&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.22">
+      <div class="step-ref failed">22</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method DELETE</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.22">09:52:38.387 request:
+1 &gt; DELETE http://api.example.com/v1/country/100
+1 &gt; Accept: application/json
+1 &gt; app-identifier: d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d
+1 &gt; customer-secret-key: ***MASKED***
+1 &gt; Host: api.example.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.387 java.net.UnknownHostException: api.example.com, http call failed after 2 milliseconds for url: http://api.example.com/v1/country/100
+09:52:38.387 country_id_delete.feature:22
+When method DELETE
+http call failed after 2 milliseconds for url: http://api.example.com/v1/country/100
+java.net.UnknownHostException: api.example.com
+country_id_delete.feature:22
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.status == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.status == &#39;success&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;Country deleted successfully&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error_info == &#39;#? _ == null || typeof _ == &quot;string&quot;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:37]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:37]</span>
+                <span class="scenario-name">Failure due to missing app-identifier header</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:37]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;SAMPLE_API_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">09:52:38.389 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.389 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:38.390 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.390 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header app-identifier = &#39;d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:37]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header customer-secret-key = &#39;12546580645c21b8a3529680f455f715b6b6829da8976bdfd2e9d51181fe&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;country/32&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header app-identifier = null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref failed">40</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method DELETE</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.40">09:52:38.393 request:
+1 &gt; DELETE http://api.example.com/v1/country/32
+1 &gt; Accept: application/json
+1 &gt; app-identifier: null
+1 &gt; customer-secret-key: ***MASKED***
+1 &gt; Host: api.example.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.394 java.net.UnknownHostException: api.example.com, http call failed after 1 milliseconds for url: http://api.example.com/v1/country/32
+09:52:38.394 country_id_delete.feature:40
+When method DELETE
+http call failed after 1 milliseconds for url: http://api.example.com/v1/country/32
+java.net.UnknownHostException: api.example.com
+country_id_delete.feature:40
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref skipped">41</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>assert responseStatus != 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref skipped">42</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref skipped">43</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error.code == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref skipped">44</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:46]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:46]</span>
+                <span class="scenario-name">Failure due to missing customer-secret-key header</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:46]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;SAMPLE_API_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">09:52:38.396 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.396 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:38.397 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.397 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header app-identifier = &#39;d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header customer-secret-key = &#39;12546580645c21b8a3529680f455f715b6b6829da8976bdfd2e9d51181fe&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;country/32&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header customer-secret-key = null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref failed">49</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method DELETE</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.49">09:52:38.399 request:
+1 &gt; DELETE http://api.example.com/v1/country/32
+1 &gt; Accept: application/json
+1 &gt; app-identifier: d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d
+1 &gt; customer-secret-key: ***MASKED***
+1 &gt; Host: api.example.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.400 java.net.UnknownHostException: api.example.com, http call failed after 1 milliseconds for url: http://api.example.com/v1/country/32
+09:52:38.400 country_id_delete.feature:49
+When method DELETE
+http call failed after 1 milliseconds for url: http://api.example.com/v1/country/32
+java.net.UnknownHostException: api.example.com
+country_id_delete.feature:49
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref skipped">50</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>assert responseStatus != 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref skipped">51</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref skipped">52</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error.code == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref skipped">53</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:55]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:55]</span>
+                <span class="scenario-name">Failure due to missing ID in the path</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:55]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:55]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;SAMPLE_API_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">09:52:38.402 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.402 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:38.403 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.403 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:55]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:55]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:55]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header app-identifier = &#39;d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:55]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref bg-step">18</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header customer-secret-key = &#39;12546580645c21b8a3529680f455f715b6b6829da8976bdfd2e9d51181fe&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;country/ &#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.57">
+      <div class="step-ref failed">57</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method DELETE</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.57">09:52:38.405 request:
+1 &gt; DELETE http://api.example.com/v1/country/%20
+1 &gt; Accept: application/json
+1 &gt; app-identifier: d645d2b40811f5672c93794d8622da45588f32cdb2ed85336475bf479e5d
+1 &gt; customer-secret-key: ***MASKED***
+1 &gt; Host: api.example.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.406 java.net.UnknownHostException: api.example.com, http call failed after 2 milliseconds for url: http://api.example.com/v1/country/%20
+09:52:38.406 country_id_delete.feature:57
+When method DELETE
+http call failed after 2 milliseconds for url: http://api.example.com/v1/country/%20
+java.net.UnknownHostException: api.example.com
+country_id_delete.feature:57
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.58">
+      <div class="step-ref skipped">58</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>assert responseStatus != 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.59">
+      <div class="step-ref skipped">59</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref skipped">60</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error.code == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.61">
+      <div class="step-ref skipped">61</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.error.message == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,6297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"16e89fa3-7fa9-43ab-88f8-10f6ce449e5f",karate_version:"1.5.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>laureates_get</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">18</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-09-04 09:52:38 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:32]"><span>[1.1:32]</span> <span>Validate successful response for filtering laureates</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.2:33]"><span>[1.2:33]</span> <span>Validate successful response for filtering laureates</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.1:45]"><span>[2.1:45]</span> <span>Validate unsuccessful response for malformed syntax</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.2:46]"><span>[2.2:46]</span> <span>Validate unsuccessful response for malformed syntax</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:48]"><span>[3:48]</span> <span>Validate metadata structure and response consistency</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4.1:68]"><span>[4.1:68]</span> <span>Validate filtered laureates by name</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4.2:69]"><span>[4.2:69]</span> <span>Validate filtered laureates by name</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5:71]"><span>[5:71]</span> <span>Validate response structure for empty result</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[6.1:89]"><span>[6.1:89]</span> <span>Validate response for unprocessable entity</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[6.2:90]"><span>[6.2:90]</span> <span>Validate response for unprocessable entity</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[7.1:102]"><span>[7.1:102]</span> <span>Validate response for invalid ID parameter</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[7.2:103]"><span>[7.2:103]</span> <span>Validate response for invalid ID parameter</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[8:105]"><span>[8:105]</span> <span>Validate laureates response content and nested objects</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[9:114]"><span>[9:114]</span> <span>Validate pagination links in response</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[10.1:135]"><span>[10.1:135]</span> <span>Validate successful response for specific affiliation filter</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[10.2:136]"><span>[10.2:136]</span> <span>Validate successful response for specific affiliation filter</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[11.1:147]"><span>[11.1:147]</span> <span>Validate sort order for laureates</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[11.2:148]"><span>[11.2:148]</span> <span>Validate sort order for laureates</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">laureates_get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Test Nobel Prize Laureates API</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:32]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:32]</span>
+                <span class="scenario-name">Validate successful response for filtering laureates</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>98</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:32]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:32]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:36.017 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.018 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.018 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.019 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:32]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:32]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param offset = 1</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param limit = 10</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">96</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.22">09:52:36.023 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?offset=1&amp;limit=10
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.067 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?offset=1&amp;limit=10
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.117 response time in milliseconds: 48
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 36
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c98517930b7e5-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.23">
+      <div class="step-ref failed">23</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.23">09:52:36.118 laureates_get.feature:23
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 48, url: http://api.nobelprize.org/2.1/2.1/laureates?offset=1&amp;limit=10, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:23
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].laureateIfPerson.gender == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta.offset == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta.limit == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:33]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:33]</span>
+                <span class="scenario-name">Validate successful response for filtering laureates</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>104</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:33]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:36.121 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.122 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.123 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.123 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:33]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param offset = 5</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param limit = 50</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.22">
+      <div class="step-ref passed">22</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">103</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.22">09:52:36.128 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?offset=5&amp;limit=50
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.171 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?offset=5&amp;limit=50
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.228 response time in milliseconds: 55
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 45
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c98521e9a7143-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.23">
+      <div class="step-ref failed">23</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.23">09:52:36.230 laureates_get.feature:23
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 55, url: http://api.nobelprize.org/2.1/2.1/laureates?offset=5&amp;limit=50, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:23
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.24">
+      <div class="step-ref skipped">24</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.25">
+      <div class="step-ref skipped">25</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.26">
+      <div class="step-ref skipped">26</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].laureateIfPerson.gender == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.27">
+      <div class="step-ref skipped">27</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta.offset == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta.limit == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:45]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:45]</span>
+                <span class="scenario-name">Validate unsuccessful response for malformed syntax</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>101</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:45]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:36.234 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.235 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.236 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.236 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:45]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param birthDate = &#39;abcd&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">100</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.38">09:52:36.240 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?birthDate=abcd
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.280 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?birthDate=abcd
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.338 response time in milliseconds: 56
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 45
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c9852cbcc23ff-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.39">
+      <div class="step-ref failed">39</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.39">09:52:36.339 laureates_get.feature:39
+Then status 400
+status code was: 404, expected: 400, response time in milliseconds: 56, url: http://api.nobelprize.org/2.1/2.1/laureates?birthDate=abcd, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:39
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;404&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.41">
+      <div class="step-ref skipped">41</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;There is not Laureate born that date&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:46]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:46]</span>
+                <span class="scenario-name">Validate unsuccessful response for malformed syntax</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>120</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:46]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:36.344 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.344 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.345 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.346 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.36">
+      <div class="step-ref passed">36</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param birthDate = &#39;xyz&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">119</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.38">09:52:36.350 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?birthDate=xyz
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.413 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?birthDate=xyz
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.466 response time in milliseconds: 52
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c98539899ff69-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.39">
+      <div class="step-ref failed">39</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.39">09:52:36.467 laureates_get.feature:39
+Then status 400
+status code was: 404, expected: 400, response time in milliseconds: 52, url: http://api.nobelprize.org/2.1/2.1/laureates?birthDate=xyz, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:39
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;404&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.41">
+      <div class="step-ref skipped">41</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;There is not Laureate born that date&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:48]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:48]</span>
+                <span class="scenario-name">Validate metadata structure and response consistency</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>122</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:48]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:48]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">09:52:36.471 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.472 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.473 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.473 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:48]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:48]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref passed">49</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param limit = 20</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">121</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.51">09:52:36.478 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?limit=20
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.540 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?limit=20
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.597 response time in milliseconds: 55
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 43
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c9854698248f8-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref failed">52</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.52">09:52:36.598 laureates_get.feature:52
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 55, url: http://api.nobelprize.org/2.1/2.1/laureates?limit=20, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:52
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref skipped">53</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta == &#39;#object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref skipped">54</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta.offset == &#39;##number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref skipped">55</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta.limit == &#39;##number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref skipped">56</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.meta.name == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4.1:68]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4.1:68]</span>
+                <span class="scenario-name">Validate filtered laureates by name</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>153</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4.1:68]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4.1:68]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:36.602 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.603 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.604 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.604 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4.1:68]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4.1:68]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.59">
+      <div class="step-ref passed">59</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param name = &#39;Alfred Nobel&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">152</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.61">09:52:36.608 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?name=Alfred+Nobel
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.636 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?name=Alfred+Nobel
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.758 response time in milliseconds: 120
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c9854fcd64418-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.62">
+      <div class="step-ref failed">62</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.62">09:52:36.759 laureates_get.feature:62
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 120, url: http://api.nobelprize.org/2.1/2.1/laureates?name=Alfred+Nobel, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:62
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.63">
+      <div class="step-ref skipped">63</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.64">
+      <div class="step-ref skipped">64</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].laureateIfPerson.knownName == &#39;##object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4.2:69]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4.2:69]</span>
+                <span class="scenario-name">Validate filtered laureates by name</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>92</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4.2:69]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4.2:69]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:36.763 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.764 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.765 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.765 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[4.2:69]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4.2:69]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.59">
+      <div class="step-ref passed">59</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param name = &#39;Marie Curie&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.61">
+      <div class="step-ref passed">61</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">91</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.61">09:52:36.769 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?name=Marie+Curie
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.811 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?name=Marie+Curie
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.858 response time in milliseconds: 46
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 42
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c98561ba83ed9-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.62">
+      <div class="step-ref failed">62</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.62">09:52:36.859 laureates_get.feature:62
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 46, url: http://api.nobelprize.org/2.1/2.1/laureates?name=Marie+Curie, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:62
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.63">
+      <div class="step-ref skipped">63</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.64">
+      <div class="step-ref skipped">64</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].laureateIfPerson.knownName == &#39;##object&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5:71]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5:71]</span>
+                <span class="scenario-name">Validate response structure for empty result</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>111</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5:71]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5:71]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">09:52:36.867 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.868 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.868 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.868 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:71]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5:71]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.72">
+      <div class="step-ref passed">72</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.73">
+      <div class="step-ref passed">73</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param yearTo = 2100</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.74">
+      <div class="step-ref passed">74</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">109</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.74">09:52:36.874 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?yearTo=2100
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.939 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?yearTo=2100
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:36.981 response time in milliseconds: 40
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:36 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:36 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 42
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c9856d8f5ff6b-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref failed">75</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.75">09:52:36.982 laureates_get.feature:75
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 40, url: http://api.nobelprize.org/2.1/2.1/laureates?yearTo=2100, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:75
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.76">
+      <div class="step-ref skipped">76</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.77">
+      <div class="step-ref skipped">77</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>assert karate.sizeOf(response.laureates) == 0</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6.1:89]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6.1:89]</span>
+                <span class="scenario-name">Validate response for unprocessable entity</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>115</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6.1:89]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6.1:89]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:36.985 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.986 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:36.987 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:36.988 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[6.1:89]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6.1:89]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param deathDateTo = &#39;abcd&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.82">
+      <div class="step-ref passed">82</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">114</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.82">09:52:36.992 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?deathDateTo=abcd
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.039 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?deathDateTo=abcd
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.104 response time in milliseconds: 64
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 42
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c98578fde4bfb-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.83">
+      <div class="step-ref failed">83</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.83">09:52:37.105 laureates_get.feature:83
+Then status 422
+status code was: 404, expected: 422, response time in milliseconds: 64, url: http://api.nobelprize.org/2.1/2.1/laureates?deathDateTo=abcd, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:83
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.84">
+      <div class="step-ref skipped">84</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;404&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.85">
+      <div class="step-ref skipped">85</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;There is not Laureate born that date&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6.2:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6.2:90]</span>
+                <span class="scenario-name">Validate response for unprocessable entity</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>101</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6.2:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6.2:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:37.108 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.109 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.110 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.110 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[6.2:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[6.2:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param deathDateTo = &#39;xyz&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.82">
+      <div class="step-ref passed">82</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">100</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.82">09:52:37.114 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?deathDateTo=xyz
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.145 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?deathDateTo=xyz
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.212 response time in milliseconds: 66
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 22
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c985838cc8375-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.83">
+      <div class="step-ref failed">83</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.83">09:52:37.213 laureates_get.feature:83
+Then status 422
+status code was: 404, expected: 422, response time in milliseconds: 66, url: http://api.nobelprize.org/2.1/2.1/laureates?deathDateTo=xyz, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:83
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.84">
+      <div class="step-ref skipped">84</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.code == &#39;404&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.85">
+      <div class="step-ref skipped">85</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;There is not Laureate born that date&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7.1:102]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7.1:102]</span>
+                <span class="scenario-name">Validate response for invalid ID parameter</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>100</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[7.1:102]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[7.1:102]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:37.217 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.218 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.219 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.219 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[7.1:102]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[7.1:102]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.93">
+      <div class="step-ref passed">93</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param ID = -1</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.95">
+      <div class="step-ref passed">95</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">99</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.95">09:52:37.222 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?ID=-1
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.255 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?ID=-1
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.319 response time in milliseconds: 62
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 13
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c9858d8183ce8-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.96">
+      <div class="step-ref passed">96</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.97">
+      <div class="step-ref failed">97</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.code == &#39;404&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.97">09:52:37.321 laureates_get.feature:97
+And match response.code == &#39;404&#39;
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  &#39;#notpresent&#39;
+  &#39;404&#39;
+
+laureates_get.feature:97
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.98">
+      <div class="step-ref skipped">98</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;There is not Laureate born that date&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7.2:103]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7.2:103]</span>
+                <span class="scenario-name">Validate response for invalid ID parameter</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>101</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[7.2:103]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[7.2:103]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:37.325 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.325 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.326 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.326 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[7.2:103]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[7.2:103]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.93">
+      <div class="step-ref passed">93</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param ID = 0</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.95">
+      <div class="step-ref passed">95</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">99</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.95">09:52:37.330 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?ID=0
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.368 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?ID=0
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.428 response time in milliseconds: 58
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 8
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c9859985b3c40-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.96">
+      <div class="step-ref passed">96</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.97">
+      <div class="step-ref failed">97</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.code == &#39;404&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.97">09:52:37.429 laureates_get.feature:97
+And match response.code == &#39;404&#39;
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  &#39;#notpresent&#39;
+  &#39;404&#39;
+
+laureates_get.feature:97
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.98">
+      <div class="step-ref skipped">98</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;There is not Laureate born that date&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[8:105]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[8:105]</span>
+                <span class="scenario-name">Validate laureates response content and nested objects</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>92</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[8:105]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[8:105]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">09:52:37.433 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.434 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.434 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.435 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[8:105]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[8:105]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.106">
+      <div class="step-ref passed">106</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.107">
+      <div class="step-ref passed">107</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">92</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.107">09:52:37.437 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.465 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.528 response time in milliseconds: 61
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 13
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c985a2f6546fc-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.108">
+      <div class="step-ref failed">108</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.108">09:52:37.528 laureates_get.feature:108
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 61, url: http://api.nobelprize.org/2.1/2.1/laureates, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:108
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.109">
+      <div class="step-ref skipped">109</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.110">
+      <div class="step-ref skipped">110</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].id == &#39;#number&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.111">
+      <div class="step-ref skipped">111</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].laureateIfPerson.birth.date == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.112">
+      <div class="step-ref skipped">112</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].laureateIfOrg.orgName.en == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[9:114]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[9:114]</span>
+                <span class="scenario-name">Validate pagination links in response</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>86</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[9:114]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[9:114]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">09:52:37.531 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.531 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.532 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.532 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[9:114]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[9:114]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.115">
+      <div class="step-ref passed">115</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.116">
+      <div class="step-ref passed">116</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param offset = 5</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.117">
+      <div class="step-ref passed">117</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param limit = 10</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.118">
+      <div class="step-ref passed">118</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">84</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.118">09:52:37.536 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?offset=5&amp;limit=10
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.574 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?offset=5&amp;limit=10
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.619 response time in milliseconds: 44
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 8
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c985adcf417d7-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.119">
+      <div class="step-ref failed">119</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.119">09:52:37.619 laureates_get.feature:119
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 44, url: http://api.nobelprize.org/2.1/2.1/laureates?offset=5&amp;limit=10, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:119
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.120">
+      <div class="step-ref skipped">120</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.links == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.121">
+      <div class="step-ref skipped">121</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.links[*].self == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.122">
+      <div class="step-ref skipped">122</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.links[*].next == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.123">
+      <div class="step-ref skipped">123</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.links[*].last == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[10.1:135]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[10.1:135]</span>
+                <span class="scenario-name">Validate successful response for specific affiliation filter</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>143</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[10.1:135]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[10.1:135]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:37.622 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.622 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.623 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.623 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[10.1:135]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[10.1:135]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.126">
+      <div class="step-ref passed">126</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.127">
+      <div class="step-ref passed">127</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param affiliation = &#39;University&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.128">
+      <div class="step-ref passed">128</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">142</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.128">09:52:37.626 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?affiliation=University
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.704 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?affiliation=University
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.766 response time in milliseconds: 61
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 21
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c985bba914015-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.129">
+      <div class="step-ref failed">129</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.129">09:52:37.767 laureates_get.feature:129
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 61, url: http://api.nobelprize.org/2.1/2.1/laureates?affiliation=University, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:129
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.130">
+      <div class="step-ref skipped">130</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.131">
+      <div class="step-ref skipped">131</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].nobelPrizes[*].affiliations[*].name.en == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[10.2:136]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[10.2:136]</span>
+                <span class="scenario-name">Validate successful response for specific affiliation filter</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>100</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[10.2:136]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[10.2:136]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:37.770 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.771 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.772 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.772 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[10.2:136]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[10.2:136]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.126">
+      <div class="step-ref passed">126</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.127">
+      <div class="step-ref passed">127</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param affiliation = &#39;Institute&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.128">
+      <div class="step-ref passed">128</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">99</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.128">09:52:37.776 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?affiliation=Institute
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.817 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?affiliation=Institute
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.873 response time in milliseconds: 54
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c985c6f93445b-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.129">
+      <div class="step-ref failed">129</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.129">09:52:37.873 laureates_get.feature:129
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 54, url: http://api.nobelprize.org/2.1/2.1/laureates?affiliation=Institute, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:129
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.130">
+      <div class="step-ref skipped">130</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.131">
+      <div class="step-ref skipped">131</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match each response.laureates[*].nobelPrizes[*].affiliations[*].name.en == &#39;##string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[11.1:147]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[11.1:147]</span>
+                <span class="scenario-name">Validate sort order for laureates</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>117</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[11.1:147]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[11.1:147]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.14">09:52:37.877 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.878 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:37.878 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:37.879 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[11.1:147]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[11.1:147]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.139">
+      <div class="step-ref passed">139</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.140">
+      <div class="step-ref passed">140</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param sort = &#39;asc&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.141">
+      <div class="step-ref passed">141</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">116</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.141">09:52:37.883 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?sort=asc
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.917 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?sort=asc
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:37.997 response time in milliseconds: 78
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:37 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:37 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 39
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c985d090d3b2b-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.142">
+      <div class="step-ref failed">142</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.142">09:52:37.998 laureates_get.feature:142
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 78, url: http://api.nobelprize.org/2.1/2.1/laureates?sort=asc, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:142
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.143">
+      <div class="step-ref skipped">143</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[11.2:148]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[11.2:148]</span>
+                <span class="scenario-name">Validate sort order for laureates</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>90</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[11.2:148]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[11.2:148]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseURL = karate.properties[&#39;NOBEL_PRIZE_MASTER_DATA_BASE_URL&#39;] || karate.properties[&#39;API_HOST&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.14">09:52:38.001 set envVars for key: BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.002 set envVars for key: API_HOST  with  http://api.nobelprize.org/2.1 
+09:52:38.002 set envVars for key: NOBEL_PRIZE_MASTER_DATA_BASE_URL  with  http://api.nobelprize.org/2.1 
+09:52:38.003 set envVars for key: SAMPLE_API_BASE_URL  with  http://api.example.com/v1 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[11.2:148]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseURL</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[11.2:148]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Accept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.139">
+      <div class="step-ref passed">139</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/2.1/laureates&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.140">
+      <div class="step-ref passed">140</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param sort = &#39;desc&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.141">
+      <div class="step-ref passed">141</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">89</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.141">09:52:38.006 request:
+1 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?sort=desc
+1 &gt; Accept: application/json
+1 &gt; Host: api.nobelprize.org
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.042 request:
+2 &gt; GET http://api.nobelprize.org/2.1/2.1/laureates?sort=desc
+2 &gt; Accept: application/json
+2 &gt; Host: api.nobelprize.org
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+09:52:38.094 response time in milliseconds: 50
+2 &lt; 404
+2 &lt; Date: Thu, 04 Sep 2025 09:52:38 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; access-control-allow-headers: X-Requested-With, Content-Type, Accept, Origin, Authorization
+2 &lt; access-control-allow-methods: GET
+2 &lt; access-control-allow-origin: *
+2 &lt; Cache-Control: public, max-age=60
+2 &lt; expires: Thu, 04 Sep 2025 09:53:38 GMT
+2 &lt; pragma: no-cache
+2 &lt; x-powered-by: PHP/8.2.29
+2 &lt; CF-Cache-Status: HIT
+2 &lt; Age: 9
+2 &lt; Vary: Accept-Encoding
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 979c985dcccc4701-BOM
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Not found&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.142">
+      <div class="step-ref failed">142</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.142">09:52:38.094 laureates_get.feature:142
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 50, url: http://api.nobelprize.org/2.1/2.1/laureates?sort=desc, response: 
+{&quot;message&quot;:&quot;Not found&quot;}
+laureates_get.feature:142
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.143">
+      <div class="step-ref skipped">143</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.laureates == &#39;#array&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

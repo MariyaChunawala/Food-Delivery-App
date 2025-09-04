@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>    
+    <title>Karate Summary Report</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">9</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Features</div>
+  </div>
+  <div id="nav-date">
+    <div>2025-09-04 09:52:38 AM</div>
+  </div>
+</div>
+
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <a href="karate-timeline.html">Timeline</a>
+        </div>
+        <table class="features-table table table-sm">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Title</th>
+              <th class="num">Passed</th>
+              <th class="num">Failed</th>
+              <th class="num">Scenarios</th>
+              <th class="num">Time (ms)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="failed">
+              <td>
+                <a href="country_get.html">country_get.feature</a>
+              </td>
+              <td>Validate Get All Countries API</td>
+              <td class="num">0</td>
+              <td class="num">1</td>
+              <td class="num">1</td>
+              <td class="num">3</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="country_id_delete.html">country_id_delete.feature</a>
+              </td>
+              <td>Verify DELETE /country/{id} API functionality</td>
+              <td class="num">0</td>
+              <td class="num">6</td>
+              <td class="num">6</td>
+              <td class="num">13</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="country_id_get.html">country_id_get.feature</a>
+              </td>
+              <td>Get Country by ID API</td>
+              <td class="num">0</td>
+              <td class="num">4</td>
+              <td class="num">4</td>
+              <td class="num">6</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="country_id_put.html">country_id_put.feature</a>
+              </td>
+              <td>Update Country by ID API Tests</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td class="num">3</td>
+              <td class="num">52</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="country_post.html">country_post.feature</a>
+              </td>
+              <td>Tests for Create New Country endpoint</td>
+              <td class="num">0</td>
+              <td class="num">3</td>
+              <td class="num">3</td>
+              <td class="num">5</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="laureate_laureateID_get.html">laureate_laureateID_get.feature</a>
+              </td>
+              <td>Nobel Prize Laureate API Tests</td>
+              <td class="num">0</td>
+              <td class="num">5</td>
+              <td class="num">5</td>
+              <td class="num">536</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="laureates_get.html">laureates_get.feature</a>
+              </td>
+              <td>Test Nobel Prize Laureates API</td>
+              <td class="num">0</td>
+              <td class="num">18</td>
+              <td class="num">18</td>
+              <td class="num">1945</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="nobelPrize_category_year_get.html">nobelPrize_category_year_get.feature</a>
+              </td>
+              <td>Validate Nobel Prize API endpoint /2.1/nobelPrize/{category}/{year}</td>
+              <td class="num">0</td>
+              <td class="num">5</td>
+              <td class="num">5</td>
+              <td class="num">333</td>
+            </tr>
+            <tr class="failed">
+              <td>
+                <a href="nobelPrizes_get.html">nobelPrizes_get.feature</a>
+              </td>
+              <td>API Tests for Nobel Prizes Information Retrieval</td>
+              <td class="num">1</td>
+              <td class="num">5</td>
+              <td class="num">6</td>
+              <td class="num">1074</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
+
